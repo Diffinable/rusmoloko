@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "0524f992-7535-4b53-890a-6c0102b80cfd",
+		"name": "RusMoloko",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46145410",
+		"_collection_link": "https://alexandernaumenko.postman.co/workspace/0fe9301c-d3bc-4eb7-8e97-6c9c8a6775ef/collection/46145410-0524f992-7535-4b53-890a-6c0102b80cfd?action=share&source=collection_link&creator=46145410"
+	},
+	"item": [
+		{
+			"name": "all stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/stats",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "stat by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/stats/{{stat_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"stats",
+						"{{stat_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create stat",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"farm\": \"Ферма Тестовая\",\n    \"date\": \"2026-05-28\",\n    \"abort\": 3,\n    \"bulls_from_cows\": 12,\n    \"bulls_from_heifers\": 5,\n    \"conception_cows\": 18,\n    \"conception_heifers\": 7,\n    \"cows_from_cows\": 10,\n    \"cows_from_heifers\": 4,\n    \"dead_bulls\": 0,\n    \"dead_heifers\": 1,\n    \"preg_rate_cows\": 0.82,\n    \"preg_rate_heifers\": 0.71,\n    \"reproduction_cows\": 22,\n    \"reproduction_heifers\": 9\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/stats",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update stat",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"farm\": \"Ферма Обновленная\",\n    \"date\": \"2026-05-27\",\n    \"abort\": 99\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/stats/{{stat_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"stats",
+						"{{stat_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update stat Copy",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"farm\": \"Новое название\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/stats/{{stat_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"stats",
+						"{{stat_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete stat",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/stats/{{stat_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"stats",
+						"{{stat_id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
