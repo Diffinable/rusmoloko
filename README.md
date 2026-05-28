@@ -10,4 +10,5 @@
 3. Запусти проект:
 
    docker compose up -d --build
+   
    docker compose exec app python seed.py
